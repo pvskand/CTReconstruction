@@ -1,0 +1,12 @@
+function x = art(A,B,iter)
+
+[M,N] = size(A);
+x = zeros(N,1);
+A2 = sum(A.*A,2);
+lambda = 0.2;
+
+    for i = 1:iter
+        ii = rem(i-1,M)+1;
+        x = x-lambda*((A(ii,:)*x-B(ii))/A2(ii))*A(ii,:)';
+    end
+end

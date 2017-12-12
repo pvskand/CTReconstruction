@@ -1,0 +1,41 @@
+This is the README File
+
+This project contains the following files:
+1) art.m - ART for solving equations
+2) sart.m - SART update equations for finding solution of system of linear equations
+3) back_projection.m - back projections algorithms script
+4) Hamming.m - Hamming filter
+5) Hann.m - Hann filter
+6) ramp.m - ramp filter
+7) shepp_logan.m - shepp logan filter
+8) NWFBP.m - noise weighted filter
+9) test.m - script to run the experiments.
+10) report.pdf - report for this project
+11) This README
+------------------------------------------------------------------------
+
+Instructions to run the files:
+
+1) To run Back Projection algorithms:
+
+reconstructed_img = back_projection(sinogram,angle, f, 'bp')
+
+sinogram - sinogram image
+angle - if the angle 0-180 is divided in say x steps then angle = x:x:180
+f - filter name [hann, hamming, shepp_logan, ramp, none, NWFBP]
+
+
+2) To run ART and SART
+
+reconstructed_img = back_projection(sinogram,angle, 'none', 'art') // for ART
+
+reconstructed_img = back_projection(sinogram,angle, 'none', 'sart') // for SART
+
+sinogram - sinogram image
+angle - if the angle 0-180 is divided in say x steps then angle = x:x:180
+
+------------------------------------------------------------------------
+
+References:
+[1] -  Respective Wikipedia pages to get the exact formula of the filters.
+
